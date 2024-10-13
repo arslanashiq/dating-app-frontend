@@ -26,7 +26,7 @@ The app follows a structured layout to ensure scalability:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-repo.git
+   git clone https://github.com/arslanashiq/basic-react-template.git
 
    ```
 

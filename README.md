@@ -42,7 +42,7 @@ When the app is in a loading state (tracked via the `CommonSlice`), all user int
 2. Install the dependencies:
 
    ```bash
-   npm i
+   npm install
 
    ```
 

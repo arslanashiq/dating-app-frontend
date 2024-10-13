@@ -24,5 +24,18 @@ The app follows a structured layout to ensure scalability:
 ## Setup
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/your-repo.git
+
+   ```
+
+2. Install the dependencies:
+
+   ````bash
+   npm i
+
+   1. Start the development server:
+   ```bash
+   npm run dev
+   ````

@@ -47,6 +47,12 @@ When the app is in a loading state (tracked via the `CommonSlice`), all user int
    ```
 
 3. Start the development server:
+
    ```bash
    npm run dev
+   ```
+
+4. Create production build:
+   ```bash
+   npm run build
    ```

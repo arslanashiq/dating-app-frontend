@@ -32,10 +32,12 @@ The app follows a structured layout to ensure scalability:
 
 2. Install the dependencies:
 
-   ````bash
+   ```bash
    npm i
 
-   1. Start the development server:
+   ```
+
+3. Start the development server:
    ```bash
    npm run dev
-   ````
+   ```

@@ -1,8 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const getTheme = () => {
+  const themeValue = localStorage.getItem("mui-mode");
+  if (themeValue === "dark") return true;
+  return false;
+};
 const initialState = {
   sidebarStatus: true,
-  isDarkTheme: false,
+  isDarkTheme: getTheme(),
   isLoading: false,
 };
 

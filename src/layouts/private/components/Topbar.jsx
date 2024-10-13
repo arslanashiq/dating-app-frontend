@@ -8,6 +8,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { closeSidebar, openSidebar } from "@/store/slices/commonSlice";
 // components
 import StyledAppBar from "../../../components/styled-components/StyledAppBar";
+import ThemeSlider from "@/components/ThemeSlider";
 
 function Topbar() {
   const dispatch = useDispatch();
@@ -23,7 +24,7 @@ function Topbar() {
   return (
     <StyledAppBar elevation={0} position="fixed">
       <Toolbar disableGutters sx={{ px: 1.5 }}>
-        <IconButton onClick={handleSidebar}>
+        <IconButton color="inherit" onClick={handleSidebar}>
           <MenuIcon />
         </IconButton>
         <Box sx={{ width: "100%" }}>
@@ -34,7 +35,9 @@ function Topbar() {
           </Box>
         </Box>
         <Box sx={{ display: "flex" }}>
-          <Box>Right</Box>
+          <Box>
+            <ThemeSlider />
+          </Box>
         </Box>
       </Toolbar>
     </StyledAppBar>

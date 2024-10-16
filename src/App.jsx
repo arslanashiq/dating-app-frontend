@@ -8,7 +8,7 @@ function App() {
   return (
     <MaterialThemeProvider>
       <NotistackProvider>
-        <BrowserRouter>
+        <BrowserRouter basename="/app">
           <Router />
         </BrowserRouter>
       </NotistackProvider>

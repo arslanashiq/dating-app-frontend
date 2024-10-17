@@ -13,3 +13,35 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* custom scrollbar */
+
+.hide-scroll::-webkit-scrollbar {
+  width: 0px;
+}
+.hide-scroll::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  border: 1px solid #e6e6e6;
+  background-color: #e4e4e4;
+}
+.hide-scroll::-webkit-scrollbar-thumb:hover {
+  border: 1px solid #e4e4e4;
+}
+/* styles for testing purposes */
+
+.container-div {
+  display: flex;
+  min-height: 100vh;
+  max-height: 100%;
+}
+.sidebar {
+  display: flex;
+  justify-content: center;
+  padding: 30px 10px 30px 20px;
+  height: 100vh;
+  overflow: auto;
+}
+.content {
+  flex-grow: 1; /* Take up the remaining space */
+  padding: 20px;
+}

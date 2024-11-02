@@ -1,9 +1,11 @@
 import { createTheme } from "@mui/material";
 import breakpoints from "./utilities/breakpoints";
+import palette from "./utilities/palette";
 
 const createMuiTheme = ({ darkTheme = false, isLoading = false } = {}) =>
   createTheme({
     breakpoints,
+    palette,
     colorSchemes: {
       dark: darkTheme,
     },
@@ -109,6 +111,22 @@ const createMuiTheme = ({ darkTheme = false, isLoading = false } = {}) =>
         defaultProps: {
           color: "primary",
           disabled: isLoading,
+        },
+        styleOverrides: {
+          root: (props) => {
+            return {
+              "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+                borderColor: props.error ? "red" : palette.primary.main,
+              },
+              "& .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline":
+                {
+                  borderColor: props?.error ? "red" : palette.primary.main,
+                },
+                '&.Mui-error .MuiInputAdornment-root svg': {
+                  color: 'red', // Make SVG red when error is true
+                },
+            };
+          },
         },
       },
 

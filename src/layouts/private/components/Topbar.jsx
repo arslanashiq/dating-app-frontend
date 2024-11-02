@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { Box, IconButton, Toolbar } from "@mui/material";
+import { Box, IconButton, Stack, Toolbar } from "@mui/material";
 
 // icons
 import MenuIcon from "@mui/icons-material/Menu";
@@ -9,6 +9,7 @@ import { closeSidebar, openSidebar } from "@/store/slices/commonSlice";
 // components
 import StyledAppBar from "../../../components/styled-components/StyledAppBar";
 import ThemeSlider from "@/components/ThemeSlider";
+import TopbarProfile from "./TopbarProfile";
 
 function Topbar() {
   const dispatch = useDispatch();
@@ -35,9 +36,10 @@ function Topbar() {
           </Box>
         </Box>
         <Box sx={{ display: "flex" }}>
-          <Box>
+          <Stack direction="row" spacing={1}>
             <ThemeSlider />
-          </Box>
+            <TopbarProfile />
+          </Stack>
         </Box>
       </Toolbar>
     </StyledAppBar>

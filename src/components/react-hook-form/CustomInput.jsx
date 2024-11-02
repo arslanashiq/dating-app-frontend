@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { TextField } from "@mui/material";
+import { Box, TextField } from "@mui/material";
 import { memo } from "react";
 import { useController } from "react-hook-form";
 
@@ -12,6 +12,11 @@ function CustomInput({
   label = "",
   onChange = null,
   helperText = "",
+  size = "medium",
+  type = "text",
+
+  //
+  inputContainerClassName = "",
 
   ...restProps
 }) {
@@ -36,16 +41,21 @@ function CustomInput({
     }
   };
   return (
-    <TextField
-      {...restFieldProps}
-      {...restProps}
-      name={name}
-      label={label}
-      onBlur={handleOnBlur}
-      error={Boolean(error)}
-      helperText={error?.message || helperText || ""}
-      onChange={handleOnChange}
-    />
+    <Box className={inputContainerClassName}>
+      <TextField
+        {...restFieldProps}
+        {...restProps}
+        name={name}
+        label={label}
+        size={size}
+        type={type}
+        onBlur={handleOnBlur}
+        error={Boolean(error)}
+        helperText={error?.message || helperText || ""}
+        onChange={handleOnChange}
+        className="w-100"
+      />
+    </Box>
   );
 }
 
@@ -57,5 +67,10 @@ CustomInput.propTypes = {
   label: PropTypes.string,
   onChange: PropTypes.func,
   helperText: PropTypes.string,
+  size: PropTypes.string,
+  type: PropTypes.string,
+
+  //
+  inputContainerClassName: PropTypes.string,
 };
 export default memo(CustomInput);

@@ -45,3 +45,9 @@ body {
   flex-grow: 1; /* Take up the remaining space */
   padding: 20px;
 }
+
+
+input:focus-visible {
+  outline: none !important;
+  border-width: 2px !important;
+}
